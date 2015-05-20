@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 10, 2015, 8:59:52 PM
+    Author     : user
+*/
+
+html, body{
+    width:100%;
+    height: 100%;
+}
+
+body{
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+   
+}
+
+.padding-top-30{
+    padding-top: 30px !important;
+}
+.container{
+    width:1000px;
+    margin: 0 auto;
+    display: block;
+}
+.custom-check{
+    margin-bottom: 20px;
+}
+/* This is important to make the cheked image work */
+.custom-check input[type="checkbox"]{
+    /* Declaration of height and width must in respect
+    of image width and height and positioning 
+    absolute keeps the default checkbox fit inside the image*/
+    height: 33px;
+    width: 33px;
+    position: absolute;
+    z-index: 9;
+    cursor:pointer;
+    /* Don't make display none, make opacity=0 , this
+    keeps the event work */
+    opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    filter:alpha(opacity=0);
+    *zoom:1;
+  }
+
+
+
+.custom-check input[type="checkbox"] + label span{
+    display: inline-block;
+    vertical-align: middle;
+    background:url('img/checkbox.png') no-repeat -13px -16px;
+    width: 33px;
+    height: 33px;
+    margin:0 10px 0 0;
+    cursor:pointer;
+     
+}
+
+
+
+.custom-check input[type="checkbox"]:checked + label span{
+   background:url('img/checkbox.png') no-repeat -58px -16px;
+  
+
+}
